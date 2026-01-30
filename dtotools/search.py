@@ -111,7 +111,8 @@ def search_on_title(
             )
             continue
 
-        print(f"{dt.now()} found {len(items_list)} items")
+        if verbose > 0:
+            print(f"{dt.now()} found {len(items_list)} items")
         item_counter += len(items_list)
 
         for item in items_list:
