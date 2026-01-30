@@ -3,7 +3,7 @@
   "@type": "SoftwareSourceCode",
   "identifier": "{id of the GitHub repo (can be DOI)}",
   "description": "tbd",
-  "name": "my_package",
+  "name": "dtotools",
   "codeRepository": "https://github.com/willem0boone/template_RTD",
   "issueTracker": "TBD",
   "license": "MIT License",

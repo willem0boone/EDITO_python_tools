@@ -3,7 +3,7 @@ import json
 
 # -- Project information
 
-project = 'My package'
+project = 'dtotools'
 copyright = '2026, Willem Boone'
 author = 'Willem Boone'
 

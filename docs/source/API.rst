@@ -1,10 +1,10 @@
 API
 ==================
 
-Dummy
+search
 -----------------------------
 
-.. automodule:: my_package.dummy
+.. automodule:: dtotools.search
    :members:
    :undoc-members:
    :show-inheritance:

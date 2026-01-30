@@ -1,3 +1,3 @@
-from dtotools.search import search_on_title_fast
+from dtotools.search import search_on_title
 
-results = search_on_title_fast("koster")
+results = search_on_title("koster")
