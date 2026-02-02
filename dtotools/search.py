@@ -97,9 +97,10 @@ def search_on_title(
     total_collections = len(collections)
 
     for col_idx, col_client in enumerate(collections, start=1):
+        print("-"*50)
         print(
-            f"{dt.now()} | Processing collection {col_idx}/"
-            f"{total_collections}: {col_client.title}..."
+            f"{dt.now()} | Collection {col_idx}/"
+            f"{total_collections}: {col_client.title}"
         )
 
         try:
@@ -112,16 +113,23 @@ def search_on_title(
             continue
 
         if verbose > 0:
-            print(f"{dt.now()} found {len(items_list)} items")
+            print(f"{dt.now()} | scanning {len(items_list)} items...")
         item_counter += len(items_list)
 
         for item in items_list:
             if title.lower() in item.properties.get("title", "").lower():
+                if verbose > 0:
+                    print(f"{dt.now()} | >>> found matching item: {item.properties.get('title')}")
                 results.append(item)
 
-        if verbose > 0:
-            print(f"searched a total of {item_counter} items")
-            print(f"found {len(results)} results")
+    if verbose > 0:
+        print("###########")
+        print("# SUMMARY #")
+        print("###########")
+        print(f"searched a total of {item_counter} items")
+        print(f"found {len(results)} results")
+        for item in results:
+            print(f"- {item.properties.get('title')}")
 
     return results
 
