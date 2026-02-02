@@ -26,4 +26,4 @@ def extract_version_from_file(file_path):
 codemeta = "../codemeta.json"
 version = extract_version_from_file(codemeta)
 
-from search import search_on_title
+from .search import search_on_title
